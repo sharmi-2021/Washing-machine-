@@ -1,0 +1,4 @@
+.gemini/
+artifacts/
+*.zip
+*.log

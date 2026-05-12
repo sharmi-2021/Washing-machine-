@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Admin Dashboard – Machine Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+</head>
+<body>
+<div class="admin-layout" id="adminDashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="logo-icon">🫧</div>
+        <span>Machine Service</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active"><span class="nav-icon">📊</span> Dashboard</a>
+      <a href="#"><span class="nav-icon">📋</span> All Bookings</a>
+      <a href="#" onclick="document.getElementById('filterStatus').value='pending';document.getElementById('filterStatus').dispatchEvent(new Event('change'))"><span class="nav-icon">⏳</span> Pending</a>
+      <a href="#" onclick="document.getElementById('filterStatus').value='completed';document.getElementById('filterStatus').dispatchEvent(new Event('change'))"><span class="nav-icon">✅</span> Completed</a>
+      <a href="../index.html" target="_blank"><span class="nav-icon">🌐</span> View Website</a>
+      <a href="../booking.html" target="_blank"><span class="nav-icon">📝</span> Booking Form</a>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="logout-btn" id="logoutBtn">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>📊 Bookings Dashboard</h1>
+      <div class="topbar-right">
+        <div class="search-bar">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search by name, mobile, ID..."/>
+        </div>
+        <div class="admin-badge">👤 Admin</div>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <!-- STATS -->
+      <div class="admin-stats">
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon blue">📋</div>
+          <div><div class="label">Total Bookings</div><div class="value" id="statTotal">0</div></div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon orange">⏳</div>
+          <div><div class="label">Pending</div><div class="value" id="statPending">0</div></div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon green">✅</div>
+          <div><div class="label">Completed</div><div class="value" id="statCompleted">0</div></div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon red">📅</div>
+          <div><div class="label">Today's Bookings</div><div class="value" id="statToday">0</div></div>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-card">
+        <div class="table-header">
+          <h3>📋 All Bookings</h3>
+          <div class="table-filters">
+            <select class="filter-select" id="filterStatus">
+              <option value="">All Status</option>
+              <option value="pending">⏳ Pending</option>
+              <option value="confirmed">✅ Confirmed</option>
+              <option value="assigned">👨‍🔧 Assigned</option>
+              <option value="inprogress">🔧 In Progress</option>
+              <option value="completed">🎉 Completed</option>
+              <option value="cancelled">❌ Cancelled</option>
+            </select>
+            <select class="filter-select" id="filterMachine">
+              <option value="">All Machines</option>
+              <option value="Top Load">Top Load</option>
+              <option value="Front Load">Front Load</option>
+            </select>
+            <button class="export-btn" id="exportBtn">⬇️ Export CSV</button>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="bookings-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Customer</th>
+                <th>Mobile</th>
+                <th>Machine</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTableBody">
+              <tr><td colspan="7"><div class="empty-state"><div class="emoji">⏳</div><p>Loading bookings...</p></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="admin-modal-overlay" id="detailModal">
+  <div class="admin-modal">
+    <h3>📋 Booking Details</h3>
+    <div class="detail-grid">
+      <div class="detail-item"><label>Booking ID</label><p id="dId"></p></div>
+      <div class="detail-item"><label>Booked At</label><p id="dBooked"></p></div>
+      <div class="detail-item"><label>Customer Name</label><p id="dName"></p></div>
+      <div class="detail-item"><label>Mobile / WhatsApp</label><p id="dMobile"></p></div>
+      <div class="detail-item full"><label>Address</label><p id="dAddress"></p></div>
+      <div class="detail-item"><label>Machine Type</label><p id="dMachine"></p></div>
+      <div class="detail-item"><label>Preferred Date &amp; Time</label><p id="dDate"></p></div>
+      <div class="detail-item full"><label>Problem Description</label><p id="dProblem"></p></div>
+    </div>
+    <div class="modal-status-update">
+      <label>Update Status</label>
+      <select id="dStatusSelect">
+        <option value="pending">⏳ Pending</option>
+        <option value="confirmed">✅ Confirmed</option>
+        <option value="assigned">👨‍🔧 Technician Assigned</option>
+        <option value="inprogress">🔧 In Progress</option>
+        <option value="completed">🎉 Completed</option>
+        <option value="cancelled">❌ Cancelled</option>
+      </select>
+      <div style="margin-top:12px;">
+        <label style="font-size:0.85rem;font-weight:500;color:var(--gray);display:block;margin-bottom:6px;">Technician Name</label>
+        <input type="text" id="dTech" placeholder="Assign technician name" style="width:100%;padding:10px 14px;border:1px solid #E5E7EB;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;"/>
+      </div>
+      <div style="margin-top:12px;">
+        <label style="font-size:0.85rem;font-weight:500;color:var(--gray);display:block;margin-bottom:6px;">Internal Notes</label>
+        <textarea id="dNotes" rows="2" placeholder="Service notes, parts replaced, remarks..." style="width:100%;padding:10px 14px;border:1px solid #E5E7EB;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;resize:vertical;outline:none;"></textarea>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-update" id="modalUpdateBtn">💾 Save Changes</button>
+      <button class="btn-cancel-modal" id="modalCancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>
