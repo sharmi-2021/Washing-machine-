@@ -135,7 +135,28 @@ if (dashboardEl) {
 
   document.getElementById('logoutBtn')?.addEventListener('click', logout);
 
+  // MOBILE SIDEBAR TOGGLE
+  const sidebar = document.getElementById('adminSidebar');
+  const overlay = document.getElementById('adminOverlay');
+  const toggle = document.getElementById('menuToggle');
+
+  function toggleSidebar() {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+  }
+
+  toggle?.addEventListener('click', toggleSidebar);
+  overlay?.addEventListener('click', toggleSidebar);
+
+  // Close sidebar on link click (mobile)
+  sidebar.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) toggleSidebar();
+    });
+  });
+
   function refresh() {
+
     allBookings = getBookings();
     if (!allBookings.length) { addDemoData(); allBookings = getBookings(); }
     updateStats(allBookings);

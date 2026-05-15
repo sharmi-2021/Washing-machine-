@@ -10,6 +10,9 @@
 </head>
 <body>
 <div class="admin-layout" id="adminDashboard">
+  <!-- MOBILE OVERLAY -->
+  <div class="admin-overlay" id="adminOverlay"></div>
+
 
   <!-- SIDEBAR -->
   <aside class="admin-sidebar" id="adminSidebar">
@@ -35,7 +38,11 @@
   <!-- MAIN -->
   <main class="admin-main">
     <div class="admin-topbar">
-      <h1>📊 Bookings Dashboard</h1>
+      <div class="topbar-left">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <h1>📊 Bookings Dashboard</h1>
+      </div>
+
       <div class="topbar-right">
         <div class="search-bar">
           <span>🔍</span>
