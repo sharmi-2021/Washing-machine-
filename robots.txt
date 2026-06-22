@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Allow all brand landing pages
+Allow: /samsung-washing-machine-repair-chennai/
+Allow: /lg-washing-machine-repair-chennai/
+Allow: /ifb-washing-machine-repair-chennai/
+Allow: /bosch-washing-machine-repair-chennai/
+Allow: /whirlpool-washing-machine-repair-chennai/
+
+# Allow all location landing pages — North/West Chennai cluster
+Allow: /washing-machine-service-ayyapakkam-chennai/
+Allow: /washing-machine-service-ambattur-chennai/
+Allow: /washing-machine-service-avadi-chennai/
+Allow: /washing-machine-service-koyambedu-chennai/
+Allow: /washing-machine-service-mogappair-chennai/
+Allow: /washing-machine-service-korattur-chennai/
+Allow: /washing-machine-service-villivakkam-chennai/
+Allow: /washing-machine-service-kallikuppam-chennai/
+Allow: /washing-machine-service-nolambur-chennai/
+Allow: /washing-machine-service-maduravoyal-chennai/
+Allow: /washing-machine-service-porur-chennai/
+
+# Allow booking and tracking
+Allow: /booking.html
+Allow: /tracking.html
+
+# Disallow admin panel from public indexing
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.washingmachinerepairchennai.in/sitemap.xml

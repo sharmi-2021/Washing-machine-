@@ -1,6 +1,10 @@
 const WA_NUMBER = '919445237143';
 const STORAGE_KEY = 'machine_bookings';
 
+// Detect if we are inside a brand subfolder (one level deep)
+const _inSubfolder = /\/[a-z-]+-washing-machine-[a-z-]+-chennai\//i.test(window.location.pathname);
+const _prefix = _inSubfolder ? '../' : '';
+
 function getBookings() { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
 function saveBookings(b) { localStorage.setItem(STORAGE_KEY, JSON.stringify(b)); }
 
@@ -74,10 +78,10 @@ function submitBooking(e) {
 
 document.getElementById('modalClose')?.addEventListener('click', () => {
   document.getElementById('successModal')?.classList.remove('active');
-  window.location.href = 'tracking.html';
+  window.location.href = _prefix + 'tracking.html';
 });
 document.getElementById('successModal')?.addEventListener('click', function(e) {
-  if (e.target === this) { this.classList.remove('active'); window.location.href = 'tracking.html'; }
+  if (e.target === this) { this.classList.remove('active'); window.location.href = _prefix + 'tracking.html'; }
 });
 
 // Date minimum = tomorrow
