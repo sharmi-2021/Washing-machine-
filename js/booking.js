@@ -69,11 +69,9 @@ function submitBooking(e) {
   if (bidEl) bidEl.textContent = booking.id;
   if (nameEl) nameEl.textContent = booking.name;
 
-  // Send WhatsApp after 1.5s
-  setTimeout(() => {
-    const msg = `🔧 *New Booking - Machine Service*\n\n📋 *ID:* ${booking.id}\n👤 *Name:* ${booking.name}\n📱 *Mobile:* ${booking.mobile}\n📍 *Address:* ${booking.address}\n🫧 *Machine:* ${booking.machineType}\n⚠️ *Problem:* ${booking.problem}\n📅 *Date:* ${booking.preferredDate}\n⏰ *Time:* ${booking.preferredTime}\n🕐 *Booked:* ${new Date(booking.createdAt).toLocaleString('en-IN')}`;
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-  }, 1500);
+  // Open WhatsApp instantly without delay
+  const msg = `🔧 *New Booking - Machine Service*\n\n📋 *ID:* ${booking.id}\n👤 *Name:* ${booking.name}\n📱 *Mobile:* ${booking.mobile}\n📍 *Address:* ${booking.address}\n🫧 *Machine:* ${booking.machineType}\n⚠️ *Problem:* ${booking.problem}\n📅 *Date:* ${booking.preferredDate}\n⏰ *Time:* ${booking.preferredTime}\n🕐 *Booked:* ${new Date(booking.createdAt).toLocaleString('en-IN')}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 document.getElementById('modalClose')?.addEventListener('click', () => {
