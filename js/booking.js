@@ -1,9 +1,9 @@
 const WA_NUMBER = '919445237143';
 const STORAGE_KEY = 'machine_bookings';
 
-// Detect if we are inside a brand subfolder (one level deep)
-const _inSubfolder = /\/[a-z-]+-washing-machine-[a-z-]+-chennai\//i.test(window.location.pathname);
-const _prefix = _inSubfolder ? '../' : '';
+// Detect subfolder prefix reliably from script src
+const _bookingScript = document.querySelector('script[src*="booking.js"]');
+const _prefix = (_bookingScript && _bookingScript.getAttribute('src').startsWith('../')) ? '../' : '';
 
 function getBookings() { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
 function saveBookings(b) { localStorage.setItem(STORAGE_KEY, JSON.stringify(b)); }
