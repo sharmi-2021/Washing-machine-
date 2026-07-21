@@ -1,127 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage -->
   <url>
     <loc>https://www.washingmachinerepairchennai.in/</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Booking & Tracking -->
+  <!-- Key Utility Pages -->
   <url>
     <loc>https://www.washingmachinerepairchennai.in/booking.html</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/tracking.html</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Brand SEO Landing Pages -->
+  <!-- Brand Service Pages -->
   <url>
     <loc>https://www.washingmachinerepairchennai.in/samsung-washing-machine-repair-chennai/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/lg-washing-machine-repair-chennai/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/ifb-washing-machine-repair-chennai/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/bosch-washing-machine-repair-chennai/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/whirlpool-washing-machine-repair-chennai/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- Location SEO Landing Pages — North/West Chennai Cluster -->
-  <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-ayyapakkam-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
+  <!-- Location Service Pages -->
   <url>
     <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-ambattur-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-avadi-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-koyambedu-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-mogappair-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-korattur-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-villivakkam-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-ayyapakkam-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-kallikuppam-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-nolambur-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-korattur-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-koyambedu-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-maduravoyal-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-mogappair-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-nolambur-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-porur-chennai/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.washingmachinerepairchennai.in/washing-machine-service-villivakkam-chennai/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
