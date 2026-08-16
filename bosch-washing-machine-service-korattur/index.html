@@ -58,6 +58,29 @@
       ]
     }
     </script>
+    <style>
+      @media(max-width:768px){
+        .hero-content{grid-template-columns:1fr;text-align:center;gap:28px;}
+        .hero-btns{flex-direction:column;align-items:stretch;}
+        .hero-btns .btn{width:100%;justify-content:center;}
+        .loc-hero .hero-visual{max-width:100%;}
+        .loc-hero .machine-card img{height:220px!important;}
+        .services-grid{grid-template-columns:1fr!important;}
+        .cta-strip{flex-direction:column;text-align:center;padding:28px 20px!important;}
+        .cta-btns{justify-content:center;flex-wrap:wrap;}
+        .cta-btns a{width:100%!important;justify-content:center;}
+      }
+      @media(max-width:480px){
+        .hero-title{font-size:clamp(1.6rem,7.5vw,2rem)!important;}
+        .hero-badge{font-size:0.76rem;padding:6px 12px;}
+        .hero-desc{font-size:0.88rem;}
+        .section-title{font-size:1.5rem!important;}
+        .service-card{padding:22px 16px;}
+        .cta-btns{flex-direction:column;}
+        .footer-grid{grid-template-columns:1fr!important;gap:24px;}
+        .footer-bottom{flex-direction:column;text-align:center;gap:8px;}
+      }
+    </style>
 </head>
 <body>
 

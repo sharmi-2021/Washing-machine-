@@ -246,34 +246,25 @@
     }
 
     @media(max-width:1024px) {
-      .brands-nav-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .brands-nav-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media(max-width:768px) {
-      .issues-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .review-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-strip {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .cta-btns {
-        justify-content: center;
-      }
+      .issues-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .review-grid { grid-template-columns: 1fr; }
+      .brands-nav-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .cta-strip { flex-direction: column; text-align: center; padding: 32px 20px; gap: 20px; }
+      .cta-btns { justify-content: center; flex-wrap: wrap; gap: 12px; }
+      .cta-strip h3 { font-size: 1.3rem; }
+      .cta-btns a { width: 100%; justify-content: center; }
     }
 
     @media(max-width:480px) {
-      .issues-grid {
-        grid-template-columns: 1fr;
-      }
+      .issues-grid { grid-template-columns: 1fr; }
+      .brands-nav-grid { grid-template-columns: 1fr 1fr; }
+      .issue-card { padding: 18px 14px; }
+      .issue-code { font-size: 1rem; }
+      .cta-btns { flex-direction: column; }
     }
   </style>
     <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
